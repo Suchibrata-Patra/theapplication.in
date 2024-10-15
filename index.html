@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal - www.youtube.com/codingnepal || www.codingnepalweb.com -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Tic Tac Toe Game | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-</head>
-<body>
     <style>
         /* Navbar styles */
         .navbar {
@@ -38,11 +35,34 @@
         .navbar ul li a:hover {
             color: #ddd;
         }
-    </style>
 
+        /* Styles for the image */
+        .jerry-image {
+            width: 40%; /* Adjust width as necessary */
+            position: absolute; /* Use absolute positioning */
+            left: 50%; /* Center horizontally */
+            top: 15%; /* Adjust this value to position vertically */
+            transform: translateX(-50%); /* Center the image */
+            z-index: 10; /* Ensure it is above other elements */
+            pointer-events: none; /* Prevents interaction with the image */
+        }
+
+        /* Other styles can be added below */
+        .select-box {
+            /* Add your styles for select box here */
+        }
+        .play-board {
+            /* Add your styles for play board here */
+        }
+        .result-box {
+            /* Add your styles for result box here */
+        }
+    </style>
+</head>
+<body>
     <!-- Navbar section -->
     <nav class="navbar">
-        <a href="#" class="logo" style="color: #fff; font-size: 1.5rem; font-weight: bold; text-decoration: none; line-height: 1.2; display: inline-block;">
+        <a href="#" class="logo">
             The <br> Application.in
         </a>
     </nav>
@@ -59,6 +79,15 @@
             <div class="credit">Created By <a href="https://www.suchibrata.medium.com" target="_blank">theapplication.in</a></div>
         </div>
     </div> 
+
+    <h4 style="font-weight: 400;padding-top: 13px;">
+        <center>
+            Website is Under Development, Meanwhile, Play the game :)
+        </center>
+    </h4>
+    
+    <!-- Jerry Image -->
+    <img src="tom-and-jerry-jerry.gif" alt="Jerry" class="jerry-image">
 
     <!-- playboard section -->
     <div class="play-board">
