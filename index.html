@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,24 +15,42 @@
             margin: 0;
             background-image: url('background.jpg');
             background-size: cover;
-            /* Makes the background image cover the entire screen */
             background-repeat: no-repeat;
-            /* Prevents the image from repeating */
             background-position: center;
-            /* Centers the background image */
             font-family: Arial, sans-serif;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             position: relative;
             overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
         }
 
+        /* Navbar */
+        .navbar {
+            width: 100%;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* Logo Styling */
         .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
             font-family: 'Montserrat', sans-serif;
             color: #ffffff;
+            display: flex;
+            flex-direction: column;
         }
 
         .logo .the {
@@ -42,26 +59,80 @@
         }
 
         .logo .application {
-            margin-top: -10px;
-            font-size: 50px;
+            font-size: 36px;
+            margin-top: -5px;
+        }
+
+        /* Neon Glowing Glass Card */
+        .construction-message {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            padding: 20px;
+            max-width: 500px;
+            margin-top: 100px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(250, 250, 250, 0.1), 0 0 30px rgba(226, 226, 226, 0.1);
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 200;
+        }
+
+        .construction-message p {
+            font-size: 14px;
+            font-weight: 200;
+            padding-top: 10px;
+            color: #ffffff;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .logo .application {
+                font-size: 28px;
+            }
+
+            .construction-message {
+                font-size: 20px;
+                padding: 15px;
+            }
+
+            .construction-message p {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo .the {
+                font-size: 16px;
+            }
+
+            .logo .application {
+                font-size: 24px;
+            }
+
+            .construction-message {
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .construction-message p {
+                font-size: 10px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="logo">
-        <div class="the">The</div>
-        <div class="application">Application</div>
-        <h3 style="top:30%;left:70%;font-size:50px;font-weight:200px;">
-            Website Under Construction
-            <br>
-            <p style="font-size:10px;font-weight:200px !important;padding:0px 20px 0px 0px;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, odit sequi voluptatibus illum
-                sapiente nihil, veniam tempora placeat excepturi perspiciatis ea consequatur saepe. Alias accusantium
-                veniam inventore modi, quidem rerum.
-            </p>
-        </h3>
+    <!-- Navbar with Glassmorphism -->
+    <div class="navbar">
+        <div class="logo">
+            <div class="the">The</div>
+            <div class="application">Application</div>
+        </div>
+    </div>
 
+    <!-- Neon Glowing Glass Card -->
+    <div class="construction-message" style="padding: 100px;">
+        Website Under Construction
     </div>
 </body>
 
